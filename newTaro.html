@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Tarot Card</title>
+    <style>
+        #image {
+            cursor: pointer;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <img id="image" src="back.jpg" alt="Click me!" width="200">
+    <div id="result">Кликни върху картата и виж късмета си за днес!</div>
+
+    <script>
+        document.getElementById('image').addEventListener('click', function() {
+            var randomNumber = Math.floor(Math.random() * 3);
+            let card = "";
+            let imageUrl = "";
+
+            switch(randomNumber) {
+                case 0:
+                    card = `Глупакът - символизира ново начало, 
+        спонтанност и приключения. Тази карта насърчава да приемете 
+        деня с отворено сърце и ум, готов за нови възможности и изненади. 
+        Може да се наложи да поемете рискове и да се доверите на 
+        интуицията си, дори ако пътят пред вас изглежда несигурен. 
+        Денят е подходящ за започване на нови проекти или 
+        за излизане от зоната на комфорт.`;
+                    imageUrl = "fool.png";
+                    break;
+                case 1:
+                    card = `Maгът - възможностите ви днес са неограничени.  
+        Днес е ден за предприемане на действия и използване на уменията ви. 
+        Ще имате възможност да покажете на какво сте способни 
+        и да постигнете значителен напредък в проектите си.
+        Ще се чувствате вдъхновени и креативни. 
+        Използвайте този импулс, за да намерите нови решения 
+        на стари проблеми или да започнете нещо ново.`;
+                    imageUrl = "magician.png";
+                    break;
+                case 2:
+                    card = `Върховната Жрица - денят ви ще бъде изпълнен
+         с интуитивни прозрения и вътрешно вглеждане.
+        Тази карта насърчава да се доверите на интуицията си
+         и да обърнете внимание на скритите аспекти на ситуацията.
+          Може да се наложи да се вгледате по-дълбоко в себе си 
+          или в обстоятелствата около вас, за да откриете важни истини.
+          Възможно е също така да се сблъскате с тайни или 
+          с неясни ситуации, които изискват търпение и разбиране.
+           Върховната жрица ви насърчава да бъдете спокойни и наблюдателни, 
+           като се доверите на вътрешния си глас.`;
+                    imageUrl = "high_priestess.png";
+                    break;
+            
+                default:
+                    card = "Unknown Card";
+                    imageUrl = "unknown.jpg";
+            }
+
+            document.getElementById('result').innerText = "Вашата карта за днес е: " + card;
+            document.getElementById('image').src = imageUrl;
+        });
+    </script>
+</body>
+</html>
