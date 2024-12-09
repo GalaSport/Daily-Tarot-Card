@@ -21,7 +21,7 @@
 
     <script>
         document.getElementById('image').addEventListener('click', function() {
-            var randomNumber = Math.floor(Math.random() * 3);
+            var randomNumber = Math.floor(Math.random() * 4);
             let card = "";
             let imageUrl = "";
 
@@ -58,6 +58,10 @@
            Върховната жрица ви насърчава да бъдете спокойни и наблюдателни, 
            като се доверите на вътрешния си глас.`;
                     imageUrl = "high_priestess.png";
+                    break;
+                case 3:
+                    card = `Императрицата -  `;
+                    imageUrl = "empress.png";
                     break;
             
                 default:
