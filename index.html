@@ -21,7 +21,7 @@
 
     <script>
         document.getElementById('image').addEventListener('click', function() {
-            var randomNumber = Math.floor(Math.random() * 3);
+            var randomNumber = Math.floor(Math.random() * 4);
             let card = "";
             let imageUrl = "";
 
@@ -59,14 +59,24 @@
            като се доверите на вътрешния си глас.`;
                     imageUrl = "high_priestess.png";
                     break;
-            
+                case 3:
+                    card = `Императрицата -  символизира плодородие, изобилие и грижа,
+        символизира растеж и просперитет във всички аспекти на живота. 
+        Като карта за деня, тя ви насърчава да се свържете с вашата творческа 
+        и подхранваща страна. Това може да означава, че днес е подходящ ден 
+        за нови идеи, проекти или за грижа за себе си и близките си. 
+        Свързана е с природните цикли и красотата на заобикалящия свят.`;
+                    imageUrl = "the_empress.jpg";
+                    break;
+                    
                 default:
                     card = "Unknown Card";
                     imageUrl = "unknown.jpg";
             }
-
+            
+             document.getElementById('image').src = imageUrl;
             document.getElementById('result').innerText = "Вашата карта за днес е: " + card;
-            document.getElementById('image').src = imageUrl;
+           
         });
     </script>
 </body>
