@@ -21,7 +21,7 @@
 
     <script>
         document.getElementById('image').addEventListener('click', function() {
-            var randomNumber = Math.floor(Math.random() * 4);
+            var randomNumber = Math.floor(Math.random() * 5);
             let card = "";
             let imageUrl = "";
 
@@ -67,6 +67,14 @@
         за нови идеи, проекти или за грижа за себе си и близките си. 
         Свързана е с природните цикли и красотата на заобикалящия свят.`;
                     imageUrl = "the_empress.jpg";
+                    break;
+                case 4:
+                    card = `Императорът - той ви насърчава да поемете контрол и 
+        да въведете ред в живота си. Това е ден за вземане на важни решения, 
+        установяване на структура и демонстриране на лидерски умения.
+        Въведете организация и планиране в задачите си.
+        Фокусирайте се върху създаването на стабилна основа за бъдещите си начинания.`;
+                 imageUrl = "the_emperor.jpg";  
                     break;
                     
                 default:
